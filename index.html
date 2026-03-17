@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-ESKITES | Pago y Contacto</title>
     
-    <!-- Bootstrap 5 + Iconos (todo en uno) -->
+    <!-- Bootstrap 5 + Iconos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <style>
-        /* Solo lo esencial que Bootstrap no puede hacer */
         body {
-            background: linear-gradient(135deg, #fff7e6 0%, #ffeed9 100%);
+            background: linear-gradient(135deg, #eaffea 0%, #d4ffd4 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
         
         .header {
-            background: linear-gradient(135deg, #ff9f1c 0%, #f08c00 100%);
+            background: linear-gradient(135deg, #7CFC00 0%, #4CAF50 100%);
             border-bottom-left-radius: 3rem;
             border-bottom-right-radius: 3rem;
             position: relative;
             overflow: hidden;
         }
-        
-        .header::before {
-            content: "🌽";
-            position: absolute;
-            font-size: 8rem;
-            opacity: 0.1;
-            right: 10px;
-            top: -20px;
-            transform: rotate(15deg);
+
+        /* Logo redondo */
+        .logo-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .animate-bounce {
@@ -100,59 +99,58 @@
         }
     </style>
 </head>
-<body class="bg-light bg-gradient" style="background: linear-gradient(135deg, #fff7e6 0%, #ffeed9 100%);">
 
-    <!-- Header con Bootstrap -->
+<body>
+
+    <!-- Header -->
     <header class="header text-white py-5 px-3 text-center shadow-lg mb-4">
-        <div class="display-1 animate-bounce">🌽</div>
+        <img src="logo.jpeg" class="logo-img mb-3 animate-bounce">
         <h1 class="display-4 fw-bold">D-ESKITES</h1>
         <p class="fs-4 opacity-75">Los mejores esquites de la ciudad</p>
-        <p class="fs-6 opacity-75"><strong></strong>Desde 2012</strong></p>
+        <p class="fs-6 opacity-75">Desde 2012</p>
     </header>
 
     <main class="container pb-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 
-                <!-- Título de sección con Bootstrap -->
                 <div class="text-center mb-4">
-                    <h2 class="display-6 fw-bold text-dark border-bottom border-warning border-3 d-inline-block pb-2">
+                    <h2 class="display-6 fw-bold text-dark border-bottom border-success border-3 d-inline-block pb-2">
                         Pago por transferencia
                     </h2>
                 </div>
 
-                <!-- Tarjeta de Banco - Usando cards de Bootstrap -->
+                <!-- Tarjeta -->
                 <div class="bank-card text-white p-4 shadow-lg mb-4">
                     <div class="mb-4">
                         <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-bank2 fs-4 text-warning me-3"></i>
+                            <i class="bi bi-bank2 fs-4 text-success me-3"></i>
                             <span class="fs-5"><strong>Banco:</strong> BanCoppel</span>
                         </div>
                         <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-person-circle fs-4 text-warning me-3"></i>
+                            <i class="bi bi-person-circle fs-4 text-success me-3"></i>
                             <span class="fs-5"><strong>Beneficiario:</strong> Israel Garduño</span>
                         </div>
                         <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-credit-card fs-4 text-warning me-3"></i>
+                            <i class="bi bi-credit-card fs-4 text-success me-3"></i>
                             <span class="fs-5"><strong>Tarjeta:</strong> 4169 1606 1266 0879</span>
                         </div>
                     </div>
 
-                    <!-- CLABE box -->
                     <div class="bg-white bg-opacity-10 rounded-3 p-4 mb-4 border border-white border-opacity-25">
-                        <p class="mb-2"><i class="bi bi-key-fill text-warning me-2"></i> Numero de tarjeta</p>
-                        <div class="font-monospace fs-3 fw-bold text-warning text-center" id="clabe">                 
+                        <p class="mb-2">
+                            <i class="bi bi-key-fill text-success me-2"></i> Número de tarjeta
+                        </p>
+                        <div class="font-monospace fs-3 fw-bold text-success text-center" id="clabe">
                             4169 1606 1266 0879
                         </div>
                     </div>
 
-                    <!-- Botón copiar con Bootstrap -->
-                    <button class="btn btn-warning w-100 py-3 fw-bold mb-4" onclick="copiarClabe(this)">
+                    <button class="btn btn-success w-100 py-3 fw-bold mb-4" onclick="copiarClabe(this)">
                         <i class="bi bi-files me-2"></i>
-                        Copiar 
+                        Copiar
                     </button>
 
-                    <!-- Nota de voucher con Bootstrap -->
                     <div class="bg-success bg-opacity-10 border-start border-success border-4 p-3 rounded">
                         <p class="mb-0">
                             <i class="bi bi-camera text-success me-2"></i>
@@ -161,14 +159,14 @@
                     </div>
                 </div>
 
-                <!-- Sección de Contacto - Solo WhatsApp -->
+                <!-- Contacto -->
                 <div class="card border-0 shadow-lg p-4">
                     <h3 class="h5 mb-4">
-                        <i class="bi bi-telephone-fill text-primary me-2"></i>
+                        <i class="bi bi-telephone-fill text-success me-2"></i>
                         Contacto para comprobantes
                     </h3>
                     
-                    <a href="https://wa.me/5219993103126?text=Hola!%20Quiero%20confirmar%20mi%20pago%20de%20esquites%20🌽" 
+                    <a href="https://wa.me/5219993103126?text=Hola!%20Quiero%20confirmar%20mi%20pago%20de%20esquites" 
                        class="contact-item text-decoration-none p-3 rounded-3 mb-3 d-flex align-items-center" 
                        target="_blank">
                         <i class="bi bi-whatsapp fs-1 text-success me-3"></i>
@@ -177,30 +175,27 @@
                             <small class="text-secondary">+52 1 999 310 3126</small>
                         </div>
                     </a>
-
                 </div>
+
             </div>
         </div>
     </main>
 
-    <!-- Footer con Bootstrap -->
+    <!-- Footer -->
     <footer class="footer bg-dark text-white py-4 text-center mt-5">
         <div class="container">
-            <div class="mb-2">
-
-                <span class="mx-2 fs-5">D-ESKITES 🌽</span>
-              
+            <span class="mx-2 fs-5">D-ESKITES</span>
             <p class="mb-0 small opacity-75">
-                Gracias por tu preferencia | Todos los derechos reservados © 2026
+                Gracias por tu preferencia | © 2026
             </p>
         </div>
     </footer>
 
-    <!-- Toast con Bootstrap -->
+    <!-- Toast -->
     <div class="toast-notification" id="toast">
         <div class="bg-success text-white px-4 py-3 rounded-3 shadow-lg d-flex align-items-center">
             <i class="bi bi-check-circle-fill fs-4 me-2"></i>
-            <span class="fw-bold">¡CLABE copiada al portapapeles!</span>
+            <span class="fw-bold">¡Número copiado!</span>
         </div>
     </div>
 
@@ -208,49 +203,28 @@
         let timeoutId = null;
 
         function copiarClabe(btn) {
-            const clabeElement = document.getElementById("clabe");
-            const clabeText = clabeElement.innerText.replace(/\s/g, '');
+            const clabeText = document.getElementById("clabe").innerText.replace(/\s/g, '');
             
-            // Copiar al portapapeles
-            navigator.clipboard.writeText(clabeText).then(function() {
-                mostrarFeedback(btn);
-            }).catch(function() {
-                // Fallback para navegadores antiguos
-                const textArea = document.createElement("textarea");
-                textArea.value = clabeText;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
+            navigator.clipboard.writeText(clabeText).then(() => {
                 mostrarFeedback(btn);
             });
         }
 
         function mostrarFeedback(btn) {
-            // Mostrar toast
             const toast = document.getElementById('toast');
             toast.style.display = 'block';
             
-            // Cambiar botón temporalmente
             const originalHTML = btn.innerHTML;
-            const originalClass = btn.className;
-            btn.innerHTML = '<i class="bi bi-check-lg me-2"></i> ¡Copiado!';
-            btn.className = 'btn btn-success w-100 py-3 fw-bold mb-4';
+            btn.innerHTML = '✔ Copiado';
             
-            // Limpiar timeout anterior
             if (timeoutId) clearTimeout(timeoutId);
             
-            // Ocultar todo después de 2 segundos
-            timeoutId = setTimeout(function() {
+            timeoutId = setTimeout(() => {
                 toast.style.display = 'none';
                 btn.innerHTML = originalHTML;
-                btn.className = originalClass;
-                timeoutId = null;
             }, 2000);
         }
     </script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
